@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "shop": "Shop",
+    "tools": "Tools",
+    "tools-bmi": {
+      "title": "BMI Calculator",
+      "description": "Calculate your Body Mass Index"
+    },
+    "tools-calorie": {
+      "title": "Calorie Calculator",
+      "description": "Calculate your daily calorie intake"
+    },
+    "tools-climb-explore": {
+      "title": "Climb Explore",
+      "description": "Explore the world's best climbing spots"
+    },
+    "tools-segment-calculator": {
+      "title": "Segment Calculator",
+      "description": "Calculate your Strava segment time"
+    },
+    "tools-events-finder": {
+      "title": "Events Finder",
+      "description": "Find events near you"
+    }
+  },
+  "footer": {
+    "company-description": "Embark on thrilling adventures and forge lasting connections as you pedal alongside fellow enthusiasts in our dynamic cycling community.",
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "membership": "Membership",
+      "terms": "Terms & Conditions"
+    },
+    "copyright": "Handlebar Heroes © 2024. All rights reserved."
+  },
+  "home": {
+    "hero-section": {
+      "title": "Handlebar Heroes Cycling Club",
+      "content": "Embark on thrilling adventures and forge lasting connections as you pedal alongside fellow enthusiasts in our dynamic cycling community."
+    },
+    "ride-groups": {
+      "fit": {
+        "description": "Ride with the fastest cyclists in the club"
+      },
+      "sport": {
+        "description": "Ride with the sportiest cyclists in the club"
+      },
+      "express": {
+        "description": "Ride with the most efficient cyclists in the club"
+      },
+      "gravel": {
+        "description": "Ride with the most adventurous cyclists in the club"
+      },
+      "velo-riders": {
+        "description": "Ride with the most daring cyclists in the club"
+      },
+      "ladies-on-bike": {
+        "description": "Ride with the most daring ladies in the club"
+      },
+      "kids-on-bike": {
+        "description": "Ride with the most daring kids in the club"
+      }
+    },
+    "newsletter-subscription-section": {
+      "title": "Subscribe to our newsletter",
+      "content": "Stay up to date with the latest news and updates from our team."
+    }
+  },
+  "blog": {
+    "title": "Welcome to the blog page",
+    "content": "This is the blog page content"
+  },
+  "shop": {
+    "title": "Welcome to the shop page",
+    "content": "This is the shop page content"
+  },
+  "tools": {
+    "title": "Welcome to the tools page",
+    "content": "This is the tools page content"
+  }
+}

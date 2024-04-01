@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "blog": "Blog",
+    "shop": "Geschäft",
+    "tools": "Werkzeuge",
+    "tools-bmi": {
+      "title": "BMI-Rechner",
+      "description": "Berechnen Sie Ihren Body-Mass-Index"
+    },
+    "tools-calorie": {
+      "title": "Kalorienrechner",
+      "description": "Berechnen Sie Ihren täglichen Kalorienbedarf"
+    },
+    "tools-climb-explore": {
+      "title": "Klettererkundung",
+      "description": "Erkunden Sie die besten Kletterorte der Welt"
+    },
+    "tools-segment-calculator": {
+      "title": "Segmentrechner",
+      "description": "Berechnen Sie Ihre Strava-Segmentzeit"
+    },
+    "tools-events-finder": {
+      "title": "Veranstaltungsfinder",
+      "description": "Finden Sie Veranstaltungen in Ihrer Nähe"
+    }
+  },
+  "footer": {
+    "company-description": "Begib dich auf aufregende Abenteuer und schmiede dauerhafte Verbindungen, während du gemeinsam mit anderen Enthusiasten in unserer dynamischen Radsportgemeinschaft radelst.",
+    "links": {
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "membership": "Mitgliedschaft",
+      "terms": "AGB"
+    },
+    "copyright": "Handlebar Heroes © 2024 Alle Rechte vorbehalten."
+  },
+  "home": {
+    "hero-section": {
+      "title": "Handlebar Heroes Cycling Club",
+      "content": "Begib dich auf aufregende Abenteuer und schmiede dauerhafte Verbindungen, während du gemeinsam mit anderen Enthusiasten in unserer dynamischen Radsportgemeinschaft radelst."
+    },
+    "ride-groups": {
+      "fit": {
+        "description": "Fahre mit den schnellsten Radfahrern im Verein."
+      },
+      "sport": {
+        "description": "Fahre mit den sportlichsten Radfahrern im Verein."
+      },
+      "express": {
+        "description": "Fahre mit den effizientesten Radfahrern im Verein."
+      },
+      "gravel": {
+        "description": "Fahre mit den abenteuerlustigsten Radfahrern im Verein."
+      },
+      "velo-riders": {
+        "description": "Fahre mit den mutigsten Radfahrern im Verein."
+      },
+      "ladies-on-bike": {
+        "description": "Fahre mit den mutigsten Damen im Verein."
+      },
+      "kids-on-bike": {
+        "description": "Fahre mit den mutigsten Kindern im Verein."
+      }
+    },
+    "newsletter-subscription-section": {
+      "title": "Abonnieren Sie unseren Newsletter",
+      "content": "Bleiben Sie auf dem Laufenden über die neuesten Nachrichten und Updates von unserem Team."
+    }
+  },
+  "blog": {
+    "title": "Willkommen auf der Blog-Seite",
+    "content": "Dies ist der Inhalt der Blog-Seite"
+  },
+  "shop": {
+    "title": "Willkommen auf der Geschäftsseite",
+    "content": "Dies ist der Inhalt der Geschäftsseite"
+  },
+  "tools": {
+    "title": "Willkommen auf der Werkzeugseite",
+    "content": "Dies ist der Inhalt der Werkzeugseite"
+  }
+}

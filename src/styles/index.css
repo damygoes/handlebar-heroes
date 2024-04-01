@@ -2,67 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+  -ms-overflow-style: none;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --primary: 22, 163, 74; /* #16a34a */
+    --primary-content: 193, 247, 213; /* #c1f7d5 */
+    --primary-dark: 16, 118, 54; /* #107636 */
+    --primary-light: 28, 208, 94; /* #1cd05e */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --secondary: 163, 74, 22; /* #a34a16 */
+    --secondary-content: 247, 213, 193; /* #f7d5c1 */
+    --secondary-dark: 118, 54, 16; /* #763610 */
+    --secondary-light: 208, 94, 28; /* #d05e1c */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --background: 238, 241, 239; /* #eef1ef */
+    --foreground: 251, 252, 251; /* #fbfcfb */
+    --border: 220, 226, 222; /* #dce2de */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --copy: 34, 42, 37; /* #222a25 */
+    --copy-light: 91, 113, 99; /* #5b7163 */
+    --copy-lighter: 128, 152, 137; /* #809889 */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 22, 163, 22; /* #16a316 */
+    --success-content: 193, 247, 193; /* #c1f7c1 */
+    --warning: 163, 163, 22; /* #a3a316 */
+    --warning-content: 0, 0, 0; /* #000000 */
+    --error: 163, 22, 22; /* #a31616 */
+    --error-content: 247, 193, 193; /* #f7c1c1 */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --primary: 22, 163, 74; /* #16a34a */
+    --primary-content: 193, 247, 213; /* #c1f7d5 */
+    --primary-dark: 16, 118, 54; /* #107636 */
+    --primary-light: 28, 208, 94; /* #1cd05e */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --secondary: 163, 74, 22; /* #a34a16 */
+    --secondary-content: 247, 213, 193; /* #f7d5c1 */
+    --secondary-dark: 118, 54, 16; /* #763610 */
+    --secondary-light: 208, 94, 28; /* #d05e1c */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --background: 23, 28, 25; /* #171c19 */
+    --foreground: 34, 42, 37; /* #222a25 */
+    --border: 57, 70, 62; /* #39463e */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --copy: 251, 252, 251; /* #fbfcfb */
+    --copy-light: 213, 221, 216; /* #d5ddd8 */
+    --copy-lighter: 156, 175, 163; /* #9cafa3 */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 22, 163, 22; /* #16a316 */
+    --warning: 163, 163, 22; /* #a3a316 */
+    --error: 163, 22, 22; /* #a31616 */
+    --success-content: 193, 247, 193; /* #c1f7c1 */
+    --warning-content: 0, 0, 0; /* #000000 */
+    --error-content: 247, 193, 193; /* #f7c1c1 */
   }
 }
 
@@ -71,6 +79,41 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply scrollbar-hide bg-background text-copy;
   }
+}
+
+/* Scrollbar Hide */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide arrows for input type of number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
