@@ -44,7 +44,7 @@ function LocaleSwitch({ className }: LocaleSwitchProps) {
 
   return (
     <Select defaultValue={i18n.language} onValueChange={switchLanguage}>
-      <SelectTrigger className={cn('w-19', className)}>
+      <SelectTrigger className={cn('w-19 h-9', className)}>
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

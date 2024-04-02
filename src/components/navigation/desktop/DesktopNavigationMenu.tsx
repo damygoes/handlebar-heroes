@@ -12,7 +12,7 @@ const DesktopNavigationMenu = ({ className }: { className?: string }) => {
   const [active, setActive] = useState<string | null>(null)
   return (
     <div
-      className={cn('fixed inset-x-0 top-1 z-50 mx-auto max-w-2xl', className)}
+      className={cn('fixed inset-x-0 top-1 z-10 mx-auto max-w-md', className)}
     >
       <Menu setActive={setActive}>
         {DesktopNavigationMenuItems().map(menu => {

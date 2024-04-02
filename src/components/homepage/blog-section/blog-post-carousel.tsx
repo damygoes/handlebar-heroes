@@ -1,23 +1,21 @@
+import { Button } from '@/components/ui/button'
+import { ScreenSizeMap } from '@/hooks/useMediaQuery'
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import useMeasure from 'react-use-measure'
 
-const CARD_WIDTH = 350
+const CARD_WIDTH = 300
 const MARGIN = 20
 const CARD_SIZE = CARD_WIDTH + MARGIN
-
-const BREAKPOINTS = {
-  sm: 640,
-  lg: 1024
-}
 
 const BlogPostCarousel = () => {
   const [ref, { width }] = useMeasure()
   const [offset, setOffset] = useState(0)
 
   const CARD_BUFFER =
-    width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1
+    width > ScreenSizeMap.lg ? 3 : width > ScreenSizeMap.sm ? 2 : 1
 
   const CAN_SHIFT_LEFT = offset < 0
 
@@ -39,31 +37,35 @@ const BlogPostCarousel = () => {
   }
 
   return (
-    <section className='bg-neutral-100 py-8' ref={ref}>
+    <section className='rounded-lg bg-foreground py-8' ref={ref}>
       <div className='relative overflow-hidden p-4'>
-        <div className='mx-auto max-w-6xl'>
-          <div className='flex items-center justify-between'>
-            <h2 className='mb-4 text-4xl'>The Team Blog</h2>
+        <div className='mx-auto max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-7xl'>
+          <div className='mb-8 flex items-center justify-between'>
+            <h2 className='text-4xl text-copy'>The Team Blog</h2>
 
             <div className='flex items-center gap-2'>
-              <button
-                className={`rounded-lg border-[1px] border-border bg-background p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_LEFT ? '' : 'opacity-30'
-                }`}
+              <Button
+                size='icon'
+                variant='outline'
+                className={cn('transition-opacity', {
+                  'opacity-90': CAN_SHIFT_LEFT
+                })}
                 disabled={!CAN_SHIFT_LEFT}
                 onClick={shiftLeft}
               >
                 <ArrowLeft />
-              </button>
-              <button
-                className={`rounded-lg border-[1px] border-border bg-background p-1.5 text-2xl transition-opacity ${
-                  CAN_SHIFT_RIGHT ? '' : 'opacity-30'
-                }`}
+              </Button>
+              <Button
+                size='icon'
+                variant='outline'
+                className={cn('transition-opacity', {
+                  'opacity-90': CAN_SHIFT_RIGHT
+                })}
                 disabled={!CAN_SHIFT_RIGHT}
                 onClick={shiftRight}
               >
                 <ArrowRight />
-              </button>
+              </Button>
             </div>
           </div>
           <motion.div
@@ -96,7 +98,7 @@ const Post = ({ imgUrl, author, title, description }: PostType) => {
     >
       <img
         src={imgUrl}
-        className='mb-3 h-[200px] w-full rounded-lg object-cover'
+        className='mb-3 h-52 w-full rounded-lg object-cover'
         alt={`An image for a fake blog post titled ${title}`}
       />
       <span className='rounded-md border-[1px] border-border px-1.5 py-1 text-xs uppercase text-copy'>

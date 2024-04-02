@@ -6,7 +6,7 @@ type TeamMemberCardProps = {
 
 const TeamMemberCard = ({ teamMember }: TeamMemberCardProps) => {
   return (
-    <div className='group relative block bg-background'>
+    <div className='group relative block bg-background sm:max-h-96 md:max-h-[250px]'>
       <img
         alt={teamMember.name}
         src={teamMember.image}
@@ -14,7 +14,7 @@ const TeamMemberCard = ({ teamMember }: TeamMemberCardProps) => {
       />
 
       <div className='relative p-4 sm:p-6 lg:p-8'>
-        <p className='text-xs font-light uppercase text-foreground'>
+        <p className='text-xs font-light uppercase text-foreground dark:text-copy-lighter'>
           {teamMember.position}
         </p>
 
@@ -22,9 +22,9 @@ const TeamMemberCard = ({ teamMember }: TeamMemberCardProps) => {
           {teamMember.name}
         </p>
 
-        <div className='mt-32 sm:mt-48 lg:mt-64'>
+        <div className='mt-4'>
           <div className='translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100'>
-            <p className='text-sm text-foreground'>
+            <p className='text-sm text-foreground dark:text-copy-light'>
               {teamMember.roleDescription}
             </p>
           </div>

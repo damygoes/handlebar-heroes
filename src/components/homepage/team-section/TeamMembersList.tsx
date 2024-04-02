@@ -5,7 +5,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Elon Musk',
     position: 'CEO of Tesla, Inc.',
     roleDescription:
-      'Elon Reeve Musk FRS is a business magnate, industrial designer, and engineer. He is the founder, CEO, CTO, and chief designer of SpaceX; early investor, CEO, and product architect of Tesla, Inc.; founder of The Boring Company; co-founder of Neuralink; and co-founder and initial co-chairman of OpenAI.',
+      'Elon Reeve Musk FRS is a business magnate, industrial designer, and engineer. He is the founder, CEO, CTO, and chief designer of SpaceX; early investor, CEO, and product architect of Tesla, Inc.',
     image:
       'https://images.unsplash.com/photo-1648183185045-7a5592e66e9c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGVsb24lMjBtdXNrJTIwcGhvdG98ZW58MHx8MHx8fDI%3D'
   },

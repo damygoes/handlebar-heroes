@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 export type ScreenSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
-const screenSizeMap: { [key: string]: number } = {
+export const ScreenSizeMap: { [key: string]: number } = {
   xs: 576,
   sm: 640,
   md: 768,
@@ -11,10 +11,10 @@ const screenSizeMap: { [key: string]: number } = {
 }
 
 const getScreenSize = (width: number): ScreenSize => {
-  if (width >= screenSizeMap.xl) return 'xl'
-  if (width >= screenSizeMap.lg) return 'lg'
-  if (width >= screenSizeMap.md) return 'md'
-  if (width >= screenSizeMap.sm) return 'sm'
+  if (width >= ScreenSizeMap.xl) return 'xl'
+  if (width >= ScreenSizeMap.lg) return 'lg'
+  if (width >= ScreenSizeMap.md) return 'md'
+  if (width >= ScreenSizeMap.sm) return 'sm'
   return 'xs'
 }
 
