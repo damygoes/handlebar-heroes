@@ -1,5 +1,12 @@
+import MaxWidthWrapper from '@/components/layouts/MaxWidthWrapper'
+import PageLayout from '@/components/layouts/PageLayout'
+
 const BlogPage = () => {
-  return <div>BlogPage</div>
+  return (
+    <PageLayout showFooter>
+      <MaxWidthWrapper>Blog content goes here</MaxWidthWrapper>
+    </PageLayout>
+  )
 }
 
 export default BlogPage
